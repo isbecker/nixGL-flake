@@ -16,5 +16,6 @@
         flake-parts-lib = flake-parts.lib;
         nixGL = nixGL;
       };
+    };
   };
 }
