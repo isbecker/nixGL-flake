@@ -10,6 +10,11 @@
   };
 
   outputs = { self, nixpkgs, nixGL, ... }: {
-    flakeModule = ./flake-module.nix;
+    flakeModule = {
+      path = ./flake-module.nix;
+      args = {
+        flake-parts-lib = flake-parts.lib;
+        nixGL = nixGL;
+      };
   };
 }
