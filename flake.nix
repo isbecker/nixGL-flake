@@ -11,7 +11,7 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = { self, nixpkgs, nixGL, ... }: {
+  outputs = { self, nixpkgs, nixGL, flake-parts, ... }: {
     flakeModule = {
       path = ./flake-module.nix;
       args = {
