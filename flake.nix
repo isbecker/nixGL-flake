@@ -7,17 +7,9 @@
       url = "github:nix-community/nixGL/def00794f963f51ccdcf19a512006bd7f9c78970";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = { self, nixpkgs, nixGL, flake-parts, ... }: {
-    flakeModule = {
-      path = ./flake-module.nix;
-      args = {
-        flake-parts-lib = flake-parts.lib;
-        nixGL = nixGL;
-      };
-    };
+  outputs = { self, nixpkgs, nixGL, ... }: {
+    flakeModule = ./flake-module.nix;
   };
 }
